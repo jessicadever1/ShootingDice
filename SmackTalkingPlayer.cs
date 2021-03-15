@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace ShootingDice
 {
     // TODO: Complete this class
@@ -6,5 +9,10 @@ namespace ShootingDice
     public class SmackTalkingPlayer
     {
         public string Taunt { get; }
+        public SmackTalkingPlayer(string taunt)
+        {
+            Taunt = taunt;
+        }
     }
+
 }

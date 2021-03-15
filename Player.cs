@@ -4,8 +4,8 @@ namespace ShootingDice
 {
     public class Player
     {
-        public string Name { get; set; }
-        public int DiceSize { get; set; } = 6;
+        public string Name { get; set; } // get and set will allow it to be read AND updated
+        public int DiceSize { get; set; } = 6; // setting the dice size to 6
 
         public virtual int Roll()
         {
