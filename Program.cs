@@ -36,6 +36,12 @@ namespace ShootingDice
                 player1, player2, player3, large
             };
 
+            SmackTalkingPlayer Mack = new SmackTalkingPlayer();
+            Mack.Name = "Smack Talk Mack";
+            Mack.Play(player1);
+
+            Console.WriteLine("-------------------");
+
             OneHigherPlayer oneHigherPlyr = new OneHigherPlayer();
             oneHigherPlyr.Name = "Mr. OneHigher";
             oneHigherPlyr.Play(player1);
