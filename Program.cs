@@ -36,6 +36,12 @@ namespace ShootingDice
                 player1, player2, player3, large
             };
 
+            OneHigherPlayer oneHigherPlyr = new OneHigherPlayer();
+            oneHigherPlyr.Name = "Mr. OneHigher";
+            oneHigherPlyr.Play(player1);
+
+            Console.WriteLine("-------------------");
+
             PlayMany(players);
         }
 
