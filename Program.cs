@@ -13,48 +13,58 @@ namespace ShootingDice
 
             Player player2 = new Player();
             player2.Name = "Sue";
-
             //player2.Play(player1);
 
             //Console.WriteLine("-------------------");
 
             Player player3 = new Player();
             player3.Name = "Wilma";
-
             //player3.Play(player2);
 
             //Console.WriteLine("-------------------");
 
             Player large = new LargeDicePlayer();
             large.Name = "Bigun Rollsalot";
-
             //player1.Play(large);
 
             Console.WriteLine("-------------------");
 
-            List<Player> players = new List<Player>() {
-                player1, player2, player3, large
+            List<string> theBestList = new List<string>()
+            {
+                "You roll so low, that I'm going to call you solo.",
+                "You couldn't roll any lower if all sides were 1.",
+                "Did something go wrong when you were buying loaded dice?",
+                "Your rolls are so bad, they're not worthy of comment."
             };
+
+            CreativeSmackTalkingPlayer Draco = new CreativeSmackTalkingPlayer();
+            Draco.Taunts = theBestList;
+            Draco.Name = "Draco";
+            //Draco.Play(player1);
 
             HumanPlayer Clem = new HumanPlayer();
             Clem.Name = "Clementine";
-            Clem.Play(player1);
+            //Clem.Play(player1);
 
             Console.WriteLine("-------------------");
 
             SmackTalkingPlayer Mack = new SmackTalkingPlayer();
             Mack.Name = "Smack Talk Mack";
-            Mack.Play(player1);
+            //Mack.Play(player1);
 
             Console.WriteLine("-------------------");
 
             OneHigherPlayer oneHigherPlyr = new OneHigherPlayer();
             oneHigherPlyr.Name = "Mr. OneHigher";
-            oneHigherPlyr.Play(player1);
+            //oneHigherPlyr.Play(player1);
 
             Console.WriteLine("-------------------");
 
+            List<Player> players = new List<Player>() {
+                player1, player2, player3, large, Clem, Draco, Mack, oneHigherPlyr
+            };
             PlayMany(players);
+
         }
 
         static void PlayMany(List<Player> players)
